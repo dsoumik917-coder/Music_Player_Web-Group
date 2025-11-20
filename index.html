@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Style Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="login-page" class="page">
+    <div class="login-box glass">
+      <h2><i class="fa-solid fa-music"></i> Login to Music Player</h2>
+      <input type="text" id="username" placeholder="👤 Username">
+      <input type="password" id="password" placeholder="🔒 Password">
+      <button id="loginBtn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+      <p id="login-error"></p>
+    </div>
+  </div>
+
+  <div id="music-page" class="page hidden">
+    <div class="player-box glass">
+      <h2><i class="fa-solid fa-headphones"></i> Now Playing</h2>
+
+      <div class="album-art">
+        <img id="cover" src="images/cover1.jpeg" alt="Album Cover">
+      </div>
+
+      <p id="currentSong">Select a song to play</p>
+      
+      <div class="progress-container">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="progress" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div id="player-controls">
+        <button id="prev" class="control-btn"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="play" class="control-btn"><i class="fa-solid fa-play"></i></button>
+        <button id="pause" class="control-btn"><i class="fa-solid fa-pause"></i></button>
+        <button id="next" class="control-btn"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="🔍 Search for a song...">
+      </div>
+
+      <ul id="songList"></ul>
+
+      <audio id="audio"></audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
